@@ -1,10 +1,9 @@
-from flask import Flask, request, session, redirect
+from flask import Flask, request, redirect
 import pandas as pd
-from twilio.twiml.messaging_response import (
-    MessagingResponse,
-    Message,
-    Body
-)
+from twilio.twiml.messaging_response import MessagingResponse
+#     Message,
+#     Body
+# )
 
 calendar = pd.read_csv("YearDiary.csv", dtype=str)
 pupil_list = pd.read_csv("pupils.csv", dtype=str)
@@ -21,7 +20,7 @@ def search():
     inbound_message = request.form['Body']
 
     # if the text message starts with "year" then send the years requested.
-        if inbound_message.lower()[0:4]=="year":
+    if inbound_message.lower()[0:4]=="year":
     	year_list=[]
     	for char in school_years:
     		if char in inbound_message.upper()[4:]:
