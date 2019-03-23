@@ -13,3 +13,5 @@ Installation.
 - Ensure all dependent packages are installed by using the command: pip install -r requirements.txt  IT IS STRONGLY RECOMMENDED THIS IS DONE IN A VIRTUAL ENVIRONMENT
 - run the sms_school_dates.py file
 - In your Twilio account ensure your Twilio phone number has been configured so the web address of your server (including "/sms" on the end) is entered into Messaging: A MESSAGE COMES IN webhook field.
+
+- This file includes sample data in YearDiary.csv and pupils.csv.  Naturally this will need to be updated with your data, or the code amended to link to your data sources.
